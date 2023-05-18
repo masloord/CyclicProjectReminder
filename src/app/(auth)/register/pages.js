@@ -1,6 +1,6 @@
 export default function Register() {
   <html lang="en">
-    <body className={inter.className}>
+    <body className={}>
       { children }
       {' '}
     </body>
