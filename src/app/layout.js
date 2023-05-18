@@ -1,5 +1,17 @@
+'use client';
+
+/* eslint-disable import/no-extraneous-dependencies */
+
 import './globals.css';
 import { Inter } from 'next/font/google';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import AppBar from '@mui/material/AppBar';
+import CameraIcon from '@mui/icons-material/PhotoCamera';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,6 +24,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <AppBar position="relative">
+          <Toolbar>
+            <CameraIcon sx={{ mr: 2 }} />
+            <Typography variant="h6" color="inherit" noWrap>
+              Cyclic Project Reminder
+            </Typography>
+          </Toolbar>
+        </AppBar>
         { children }
         {' '}
       </body>
